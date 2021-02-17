@@ -2,8 +2,8 @@ import * as React from 'react';
 import './welcome.css';
 
 export const Welcome = () => (
-    <div class='welcome'>
+    <div className='welcome'>
         <p>Welcome to React!</p>
-        <p>Powered by <span class='welcome__poweredby'>Snowpack</span></p>
+        <p>Powered by <span className='welcome__poweredby'>Snowpack</span></p>
     </div>
 )

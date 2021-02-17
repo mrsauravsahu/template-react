@@ -1,10 +1,12 @@
 .welcome {
-    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-self: center;
     align-items: center;
-    background: linear-gradient(#5D86C1, #172a50);
+    justify-content: center;
+    background-color: #00000088;
+    padding: 1rem 4rem;
+    border-radius: 1rem;
 }
 
 .welcome > p {
@@ -13,6 +15,8 @@
 
 .welcome > p:nth-of-type(1) {
     font-size: 3rem;
+    font-weight: 800;
+    margin: 2rem 0.25rem 0.25rem 0.25rem;
 }
 
 .welcome > p:nth-of-type(2) {
