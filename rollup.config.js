@@ -8,6 +8,7 @@ import {terser} from 'rollup-plugin-terser';
 import minify from 'rollup-plugin-minify';
 import {uglify} from 'rollup-plugin-uglify';
 import gzip from 'rollup-plugin-gzip';
+import visualizer from 'rollup-plugin-visualizer';
 
 /** @type {import('rollup').RollupOptions} */
 export const rollupOptions = {
@@ -42,6 +43,10 @@ export const rollupOptions = {
         minify(),
         uglify(),
         gzip(),
+        visualizer({
+            template: 'sunburst',
+            filename: 'reports/vis.html'
+        })
     ]
 };
 
