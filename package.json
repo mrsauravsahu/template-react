@@ -2,7 +2,7 @@
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
-    "bundle": "rollup --config",
+    "bundle": "rimraf bundle && rollup --config && rimraf bundle/dist/*.js",
     "test": "echo \"This template does not include a test runner by default.\" && exit 1"
   },
   "devDependencies": {
@@ -11,9 +11,14 @@
     "@rollup/plugin-replace": "^2.3.4",
     "@rollup/plugin-sucrase": "^3.1.0",
     "postcss": "^8.2.6",
+    "rimraf": "^3.0.2",
     "rollup": "^2.39.0",
     "rollup-plugin-copy": "^3.3.0",
+    "rollup-plugin-gzip": "^2.5.0",
+    "rollup-plugin-minify": "^1.0.3",
     "rollup-plugin-postcss": "^4.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-uglify": "^6.0.4",
     "snowpack": "^3.0.1"
   },
   "dependencies": {

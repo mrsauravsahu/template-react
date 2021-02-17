@@ -4,13 +4,17 @@ import postcss from 'rollup-plugin-postcss';
 import copy from 'rollup-plugin-copy';
 import replace from '@rollup/plugin-replace';
 import commonjs from '@rollup/plugin-commonjs';
+import {terser} from 'rollup-plugin-terser';
+import minify from 'rollup-plugin-minify';
+import {uglify} from 'rollup-plugin-uglify';
+import gzip from 'rollup-plugin-gzip';
 
 /** @type {import('rollup').RollupOptions} */
 export const rollupOptions = {
     input: 'src/index.jsx',
     output: {
         format: 'iife',
-        dir: 'bundle/dist',
+        dir: 'bundle/dist'
     },
     plugins: [
         replace({
@@ -34,6 +38,10 @@ export const rollupOptions = {
             ]
         }),
         commonjs(),
+        terser(),
+        minify(),
+        uglify(),
+        gzip(),
     ]
 };
 
