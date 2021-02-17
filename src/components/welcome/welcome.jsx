@@ -4,6 +4,6 @@ import './welcome.css';
 export const Welcome = () => (
     <div class='welcome'>
         <p>Welcome to React!</p>
-        <p>Powered by Snowpack</p>
+        <p>Powered by <span class='welcome__poweredby'>Snowpack</span></p>
     </div>
 )
