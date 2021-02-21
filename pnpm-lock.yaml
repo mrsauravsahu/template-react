@@ -6,6 +6,8 @@ devDependencies:
   '@rollup/plugin-node-resolve': 11.2.0_rollup@2.39.0
   '@rollup/plugin-replace': 2.3.4_rollup@2.39.0
   '@rollup/plugin-sucrase': 3.1.0_rollup@2.39.0
+  '@types/react': 17.0.2
+  '@types/react-dom': 17.0.1
   postcss: 8.2.6
   rimraf: 3.0.2
   rollup: 2.39.0
@@ -162,10 +164,27 @@ packages:
     dev: true
     resolution:
       integrity: sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==
+  /@types/prop-types/15.7.3:
+    dev: true
+    resolution:
+      integrity: sha512-KfRL3PuHmqQLOG+2tGpRO26Ctg+Cq1E01D2DMriKEATHgWLfeNDmq9e29Q9WIky0dQ3NPkd1mzYH8Lm936Z9qw==
   /@types/q/1.5.4:
     dev: true
     resolution:
       integrity: sha512-1HcDas8SEj4z1Wc696tH56G8OlRaH/sqZOynNNB+HF0WOeXPaxTtbYzJY2oEfiUxjSKjhCKr+MvR7dCHcEelug==
+  /@types/react-dom/17.0.1:
+    dependencies:
+      '@types/react': 17.0.2
+    dev: true
+    resolution:
+      integrity: sha512-yIVyopxQb8IDZ7SOHeTovurFq+fXiPICa+GV3gp0Xedsl+MwQlMLKmvrnEjFbQxjliH5YVAEWFh975eVNmKj7Q==
+  /@types/react/17.0.2:
+    dependencies:
+      '@types/prop-types': 15.7.3
+      csstype: 3.0.6
+    dev: true
+    resolution:
+      integrity: sha512-Xt40xQsrkdvjn1EyWe1Bc0dJLcil/9x2vAuW7ya+PuQip4UYUaXyhzWmAbwRsdMgwOFHpfp7/FFZebDU6Y8VHA==
   /@types/resolve/1.17.1:
     dependencies:
       '@types/node': 14.14.28
@@ -608,6 +627,10 @@ packages:
       node: '>=8.0.0'
     resolution:
       integrity: sha512-wvlcdIbf6pwKEk7vHj8/Bkc0B4ylXZruLvOgs9doS5eOsOpuodOV2zJChSpkp+pRpYQLQMeF04nr3Z68Sta9jA==
+  /csstype/3.0.6:
+    dev: true
+    resolution:
+      integrity: sha512-+ZAmfyWMT7TiIlzdqJgjMb7S4f1beorDbWbsocyK4RaiqA5RTX3K14bnBWmmA9QEM0gRdsjyyrEmcyga8Zsxmw==
   /decamelize/1.2.0:
     dev: true
     engines:
@@ -2476,6 +2499,8 @@ specifiers:
   '@rollup/plugin-node-resolve': ^11.2.0
   '@rollup/plugin-replace': ^2.3.4
   '@rollup/plugin-sucrase': ^3.1.0
+  '@types/react': ^17.0.2
+  '@types/react-dom': ^17.0.1
   postcss: ^8.2.6
   react: ^17.0.1
   react-dom: ^17.0.1
