@@ -4,15 +4,15 @@ import postcss from 'rollup-plugin-postcss';
 import copy from 'rollup-plugin-copy';
 import replace from '@rollup/plugin-replace';
 import commonjs from '@rollup/plugin-commonjs';
-import {terser} from 'rollup-plugin-terser';
+import { terser } from 'rollup-plugin-terser';
 import minify from 'rollup-plugin-minify';
-import {uglify} from 'rollup-plugin-uglify';
+import { uglify } from 'rollup-plugin-uglify';
 import gzip from 'rollup-plugin-gzip';
 import visualizer from 'rollup-plugin-visualizer';
 
 /** @type {import('rollup').RollupOptions} */
 export const rollupOptions = {
-    input: 'src/index.jsx',
+    input: 'src/index.tsx',
     output: {
         format: 'iife',
         dir: 'bundle/dist'
@@ -31,12 +31,10 @@ export const rollupOptions = {
             transforms: ['typescript', 'jsx']
         }),
         copy({
-            targets: [
-                {
-                    src: 'public/*',
-                    dest: 'bundle'
-                }
-            ]
+            targets: [{
+                src: 'public/*',
+                dest: 'bundle'
+            }]
         }),
         commonjs(),
         terser(),
