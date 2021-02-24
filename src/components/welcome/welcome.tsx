@@ -3,7 +3,7 @@ import './welcome.css';
 
 export const Welcome: React.FC<{ poweredBy?: string }> = ({ poweredBy = '@Snowpack' }) => (
     <div className='welcome'>
-        <p>Welcome to React!</p>
-        <p>Powered by <span className='welcome__poweredby'>{poweredBy}</span></p>
+        <p className='welcome__react'>Welcome to React!</p>
+        <p className='welcome__poweredBy'>Powered by <span className='welcome__poweredBy__tech'>{poweredBy}</span></p>
     </div>
 )
