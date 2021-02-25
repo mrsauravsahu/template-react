@@ -15,7 +15,7 @@ export const rollupOptions = {
     input: 'src/index.tsx',
     output: {
         format: 'iife',
-        dir: 'bundle/dist'
+        dir: 'rollup-bundle/dist'
     },
     plugins: [
         replace({
@@ -33,7 +33,7 @@ export const rollupOptions = {
         copy({
             targets: [{
                 src: 'public/*',
-                dest: 'bundle'
+                dest: 'rollup-bundle'
             }]
         }),
         commonjs(),

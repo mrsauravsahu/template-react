@@ -2,7 +2,8 @@
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
-    "bundle": "rimraf bundle && rollup --config && rimraf bundle/dist/*.js",
+    "bundle:r": "rimraf rollup-bundle && rollup --config && rimraf rollup-bundle/dist/*.js",
+    "bundle": "rimraf esbuild-bundle && node scripts/build.js && cp public/* esbuild-bundle",
     "test": "jest",
     "sb": "start-storybook -p 6006",
     "sb:build": "build-storybook"
@@ -22,6 +23,7 @@
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.1",
     "babel-loader": "^8.2.2",
+    "esbuild": "^0.8.51",
     "jest": "^26.6.3",
     "postcss": "^8.2.6",
     "rimraf": "^3.0.2",
