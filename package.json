@@ -2,7 +2,8 @@
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
-    "bundle": "rimraf bundle && rollup --config && rimraf bundle/dist/*.js",
+    "bundle:r": "rimraf rollup-bundle && rollup --config && rimraf rollup-bundle/dist/*.js",
+    "bundle": "rimraf esbuild-bundle && node scripts/build.js && cp public/* esbuild-bundle",
     "test": "jest",
     "sb": "start-storybook -p 6006",
     "sb:build": "build-storybook"

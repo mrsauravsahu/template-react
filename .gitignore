@@ -2,5 +2,9 @@
 build
 node_modules
 
-bundle
 reports
+
+.envrc
+
+rollup-bundle
+esbuild-bundle
