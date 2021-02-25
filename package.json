@@ -1,4 +1,5 @@
 {
+  "name": "template-react",
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
