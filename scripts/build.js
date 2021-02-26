@@ -1,3 +1,7 @@
+/* eslint-disable no-console */
+
+// ignoring this error because this is just a build script and package should be in devDependencies
+// eslint-disable-next-line import/no-extraneous-dependencies
 const esbuild = require('esbuild');
 
 console.log('starting esbuild build...');
