@@ -12,40 +12,40 @@ import visualizer from 'rollup-plugin-visualizer';
 
 /** @type {import('rollup').RollupOptions} */
 export const rollupOptions = {
-    input: 'src/index.tsx',
-    output: {
-        format: 'iife',
-        dir: 'rollup-bundle/dist'
-    },
-    plugins: [
-        replace({
-            'process.env.NODE_ENV': JSON.stringify('production')
-        }),
-        postcss(),
-        resolve({
-            extensions: ['.js', '.ts', '.jsx', '.tsx'],
-            browser: true
-        }),
-        sucrase({
-            exclude: ['node_modules/**'],
-            transforms: ['typescript', 'jsx']
-        }),
-        copy({
-            targets: [{
-                src: 'public/*',
-                dest: 'rollup-bundle'
-            }]
-        }),
-        commonjs(),
-        terser(),
-        minify(),
-        uglify(),
-        gzip(),
-        visualizer({
-            template: 'sunburst',
-            filename: 'reports/vis.html'
-        })
-    ]
+  input: 'src/index.tsx',
+  output: {
+    format: 'iife',
+    dir: 'rollup-bundle/dist',
+  },
+  plugins: [
+    replace({
+      'process.env.NODE_ENV': JSON.stringify('production'),
+    }),
+    postcss(),
+    resolve({
+      extensions: ['.js', '.ts', '.jsx', '.tsx'],
+      browser: true,
+    }),
+    sucrase({
+      exclude: ['node_modules/**'],
+      transforms: ['typescript', 'jsx'],
+    }),
+    copy({
+      targets: [{
+        src: 'public/*',
+        dest: 'rollup-bundle',
+      }],
+    }),
+    commonjs(),
+    terser(),
+    minify(),
+    uglify(),
+    gzip(),
+    visualizer({
+      template: 'sunburst',
+      filename: 'reports/vis.html',
+    }),
+  ],
 };
 
 export default rollupOptions;

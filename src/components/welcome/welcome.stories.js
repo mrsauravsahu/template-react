@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-import { Welcome } from './welcome'
+import { Welcome } from './welcome';
 
 export default {
-    title: 'components/Welcome',
-    component: Welcome,
-}
+  title: 'components/Welcome',
+  component: Welcome,
+};
 
-const Template = (args) => <Welcome {...args} />
+const Template = (args) => <Welcome {...args} />;
 
-export const Default = Template.bind({}, )
+export const Default = Template.bind({});
