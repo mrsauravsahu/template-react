@@ -3,7 +3,7 @@ module.exports = {
   mount: {
     /* ... */
     src: '/dist',
-    public: '/'
+    public: '/',
   },
   plugins: [
     /* ... */
