@@ -1,4 +1,6 @@
+const presetJestConfigGenerator = require('@snowpack/app-scripts-react/jest.config.js');
+
 module.exports = {
-  ...require('@snowpack/app-scripts-react/jest.config.js')(),
+  ...presetJestConfigGenerator(),
   testMatch: ['**/__tests__/**/*.[jt]s?(x)'],
 };

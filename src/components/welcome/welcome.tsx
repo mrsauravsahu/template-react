@@ -1,7 +1,11 @@
 import * as React from 'react';
 import './welcome.css';
 
-export const Welcome: React.FC<{ poweredBy?: string }> = ({ poweredBy = '@Snowpack' }) => (
+export type WelcomeProps = {
+  poweredBy?: string
+};
+
+export const Welcome: React.FC<WelcomeProps> = ({ poweredBy = '@Snowpack' }) => (
   <div className="welcome">
     <p className="welcome__react">Welcome to React!</p>
     <p className="welcome__poweredBy">
