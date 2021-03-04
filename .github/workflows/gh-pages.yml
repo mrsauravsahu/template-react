@@ -1,0 +1,41 @@
+name: deploy-github-pages
+
+on:
+  push:
+    branches:
+      - cool
+      - feat/deploy-gh-pages
+
+env:
+  NODE_VERSION: "12.8.0"
+  BUNDLE_DIRECTORY: esbuild-bundle
+  GITHUB_PAGES_PUBLISH_BRANCH: master
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-16.04
+
+    steps:
+      - name: checkout to branch
+        uses: actions/checkout@v2
+
+      - name: setup node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: build the react app
+        run: npm run bundle
+
+      - name: upload site artefact
+        uses: actions/upload-artifact@v1
+        with:
+          name: site
+          path: ${{ env.BUNDLE_DIRECTORY }}
+
+      - name: deploy to github pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ${{ env.BUNDLE_DIRECTORY }}
+          publish_branch: ${{ env.GITHUB_PAGES_PUBLISH_BRANCH }}
