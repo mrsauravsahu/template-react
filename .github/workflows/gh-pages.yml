@@ -24,6 +24,9 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
+      - name: install deps
+        run: npm i
+
       - name: build the react app
         run: npm run bundle
 
