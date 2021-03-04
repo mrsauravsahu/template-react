@@ -1,16 +1,16 @@
 import * as React from 'react';
-import './welcome.css';
+import styles from './welcome.module.css';
 
 export type WelcomeProps = {
   poweredBy?: string
 };
 
 export const Welcome: React.FC<WelcomeProps> = ({ poweredBy = '@Snowpack' }) => (
-  <div className="welcome">
-    <p className="welcome__react">Welcome to React!</p>
-    <p className="welcome__poweredBy">
-      Powered by
-      <span className="welcome__poweredBy__tech">{poweredBy}</span>
+  <div className={styles.container}>
+    <p className={styles.welcome}>Welcome to React!</p>
+    <p className={styles.poweredBy}>
+      {'Powered by '}
+      <span className={styles.tech}>{poweredBy}</span>
     </p>
   </div>
 );
