@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - cool
-      - feat/deploy-gh-pages
 
 env:
   NODE_VERSION: "14.16.0"
