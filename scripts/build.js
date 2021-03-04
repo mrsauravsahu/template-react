@@ -2,7 +2,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 // ignoring this error because this is just a build script and package should be in devDependencies
 const esbuild = require('esbuild');
-const { default: postCssPlugin } = require('esbuild-plugin-postcss2');
+const postCssPlugin = require('esbuild-plugin-postcss2');
 
 console.log('starting esbuild build...');
 
@@ -17,7 +17,7 @@ esbuild
       'process.env.NODE_ENV': '"production"',
     },
     plugins: [
-      postCssPlugin({
+      postCssPlugin.default({
         plugins: [],
       }),
     ],
