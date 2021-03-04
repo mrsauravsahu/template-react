@@ -1,4 +1,4 @@
-.welcome {
+.container {
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -11,20 +11,18 @@
     box-shadow: 0.25rem 0.25rem 1rem #00000074;
 }
 
-.welcome>p {
-    color: white;
-}
-
-.welcome__react {
+.welcome {
     font-size: 3rem;
     font-weight: 800;
     margin: 2rem 0.25rem 0.25rem 0.25rem;
+    color: white;
 }
 
-.welcome__poweredBy {
+.poweredBy {
     font-size: 1.5rem;
+    color: white;
 }
 
-.welcome__poweredBy__tech {
+.tech {
     filter: blur(0.125rem);
 }
