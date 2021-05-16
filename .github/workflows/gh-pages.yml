@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - cool
+  pull_request:
+    branches:
+      - cool
 
 env:
   NODE_VERSION: "14.16.0"
